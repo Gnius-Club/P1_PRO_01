@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Prototipo Rápido (Scratch Jr) - Sesión 1</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #ffa500; color: white; text-align: center; padding: 10px; } /* Orange Accent */
+        .activity { margin-bottom: 20px; }
+        .banner {
+            background-color: #ffa500; /* Orange Accent */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top; /* Align content to the top */
+        }
+        span[style*="color: red;"] { /* Although not used in this specific output, keep for consistency */
+            font-weight: bold;
+        }
+         ul, ol {
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555;} /* Style for static title */
+        em { /* Style for facilitator's notes */
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content) {
+                // Toggle display
+                content.style.display = content.style.display === "none" ? "block" : "none";
+            }
+        }
+
+        // Initialize content hidden state on load
+        window.onload = () => {
+             // Ensure all content starts hidden
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook - Prototipo Rápido Scratch Jr (1º Primaria) - Sesión 1</h1>
+    </div>
+    <div class="container">
+        <h2 class="time-title">Tiempo efectivo de clase: 40 minutos</h2>
+
+        <!-- Resumen de Sesión -->
+        <div id="activity-0" class="activity">
+             <div class="banner" onclick="toggleContent('activity_0_content')">
+                📝 Resumen de Sesión
+            </div>
+            <div id="activity_0_content" class="content"> <!-- Start hidden -->
+                <table>
+                    <tr>
+                        <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
+                            <strong>🎯 Objetivo de la Sesión:</strong>
+                            <ul>
+                                <li>Recordar la misión ODS y los dibujos de Héroe/Villano/Escenas.</li>
+                                <li>Introducir un tablero Kanban simplificado para organizar tareas.</li>
+                                <li>Presentar roles de equipo simplificados (Diseñador/a, Constructor/a, Probador/a).</li>
+                                <li>Comenzar a crear los personajes y fondos principales en Scratch Jr. basándose en los dibujos previos.</li>
+                            </ul>
+                            <br>
+                            <strong>⏱️ Duración Estimada:</strong> 40 minutos.
+                        </td>
+                        <td style="width: 50%; padding: 10px;">
+                            <strong>🔑 Entregable Clave:</strong>
+                            <ul>
+                                <li>Proyecto Scratch Jr. iniciado por cada equipo.</li>
+                                <li>Personajes (Héroe, Villano/Problema) y fondos (Escena Inicial, Peor, Mejor) básicos creados o seleccionados en Scratch Jr.</li>
+                                <li>Personajes principales colocados en la Escena Inicial.</li>
+                                <li>Proyecto guardado con nombre claro.</li>
+                            </ul>
+                            <br>
+                            <strong>🛠️ Materiales Específicos:</strong>
+                            <ul>
+                                <li>Dispositivos con Scratch Jr. instalado o acceso web.</li>
+                                <li>Dibujos previos de cada equipo (Héroe, Villano, Escenas / T-Bar).</li>
+                                <li>Tablero Kanban (físico con post-its o digital simple) preparado con columnas: 📝 Por Hacer, ⚙️ Haciendo, ✅ Listo para Probar, 🎉 ¡Listo!.</li>
+                                <li>Tarjetas de tareas para Kanban: "Crear Proyecto", "Añadir Personajes", "Añadir Fondos".</li>
+                            </ul>
+                            <br>
+                            <strong>🔧 Preparación Previa:</strong>
+                            <ol>
+                                <li>Asegurarse de tener los dibujos/T-Bar de cada equipo accesibles.</li>
+                                <li>Preparar el tablero Kanban y las tarjetas de tareas iniciales en "Por Hacer".</li>
+                                <li>Tener listas las diapositivas propuestas (ver lista al final).</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Desarrollo de la Sesión -->
+
+        <!-- Actividad 1: Recordatorio de Misión -->
+        <div id="activity-1" class="activity">
+            <div class="banner" onclick="toggleContent('activity_1_content')">
+                 🎯 Actividad 1: Recordatorio de Misión ⏰ Tiempo: 5 minutos
+            </div>
+            <div id="activity_1_content" class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1: (5 min)</strong>
+                            <ul>
+                                <li>Proyectar <strong>Diapositiva 1</strong> (Título: Recordando Nuestra Misión ODS. Contenido: Iconos ODS relevantes, imagen inspiradora de niños ayudando al planeta).</li>
+                                <li>Saludar y dar la bienvenida.</li>
+                                <li>Preguntar a los equipos si recuerdan su misión ODS y los personajes/escenas que dibujaron.</li>
+                                <li>Mostrar brevemente los dibujos/T-Bar de cada equipo como recordatorio visual.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            "¡Hola, Equipos de Héroes! ¡Bienvenidos a nuestra primera sesión de construcción digital!"
+                            <br><br>
+                            "¿Recuerdan la misión súper importante que elegimos para ayudar a nuestro planeta? ¿Y recuerdan los dibujos geniales que hicieron de su Héroe valiente, el Villano o problema, y las escenas de su aventura?"
+                            <br><br>
+                            <em>(Mostrar brevemente los dibujos/T-Bar de cada equipo).</em>
+                            <br><br>
+                            "¡Exacto! Esas ideas fantásticas que dibujaron en papel, ¡hoy empezarán a cobrar vida en la computadora usando Scratch Jr.! ¿Están listos para empezar a crear?"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2: Introducción a Kanban y Roles -->
+        <div id="activity-2" class="activity">
+             <div class="banner" onclick="toggleContent('activity_2_content')">
+                 📋 Actividad 2: Introducción a Kanban y Roles ⏰ Tiempo: 5 minutos
+            </div>
+            <div id="activity_2_content" class="content">
+                <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1: (3 min) Explicar Kanban</strong>
+                            <ul>
+                                <li>Proyectar <strong>Diapositiva 2</strong> (Título: Nuestro Tablero de Misión - Kanban. Contenido: Imagen simple del tablero Kanban con las 4 columnas: 📝 Por Hacer, ⚙️ Haciendo, ✅ Listo para Probar, 🎉 ¡Listo!).</li>
+                                <li>Presentar el tablero Kanban como una herramienta mágica para organizar el trabajo.</li>
+                                <li>Explicar las columnas de forma muy simple y visual, moviendo una tarjeta de ejemplo ("Crear Proyecto") a través de las fases.</li>
+                                <li>Mostrar las tarjetas iniciales ("Crear Proyecto", "Añadir Personajes", "Añadir Fondos") en la columna "Por Hacer".</li>
+                            </ul>
+                        </td>
+                        <td>
+                            "¡Miren esto, equipos! ¡Es nuestro 'Tablero de Misión' mágico! Se llama Kanban y nos ayudará a saber qué tenemos que hacer y qué ya hemos terminado."
+                            <br><br>
+                            "Es muy fácil: aquí en <strong>📝 Por Hacer</strong> ponemos las tareas que vamos a empezar."
+                            <br>
+                            "Cuando empezamos a trabajar en algo, lo movemos a <strong>⚙️ Haciendo</strong>."
+                            <br>
+                            "Cuando creemos que ya está listo, pero alguien más necesita revisarlo, lo pasamos a <strong>✅ Listo para Probar</strong>."
+                            <br>
+                            "Y cuando ya está súper comprobado y terminado... ¡lo celebramos moviéndolo a <strong>🎉 ¡Listo!</strong>"
+                            <br><br>
+                            "Hoy empezaremos con estas tareas: 'Crear Proyecto', 'Añadir Personajes' y 'Añadir Fondos'. ¡Las moveremos juntos!"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 2: (2 min) Explicar Roles</strong>
+                            <ul>
+                                <li>Proyectar <strong>Diapositiva 3</strong> (Título: Roles de Héroes. Contenido: Iconos o dibujos simples para cada rol: Diseñador/a 🎨, Constructor/a 🛠️, Probador/a 👍).</li>
+                                <li>Explicar que en cada equipo habrá roles para ayudarse mutuamente.</li>
+                                <li>Describir brevemente qué hace cada rol de forma sencilla.</li>
+                                <li>Mencionar que los roles podrán rotar en futuras sesiones.</li>
+                                <li>Asignar roles iniciales o pedir que los equipos se organicen rápidamente.</li>
+                            </ul>
+                        </td>
+                        <td>
+                             "Y para trabajar súper bien en equipo, ¡cada héroe tendrá un rol especial en esta misión! Son como superpoderes para ayudarnos:"
+                             <br><br>
+                             "🎨 <strong>El/La Diseñador/a de Historia:</strong> Se asegura de que todo se vea como en sus dibujos. ¡Cuida los detalles y colores!"
+                             <br>
+                             "🛠️ <strong>El/La Constructor/a Scratch Jr.:</strong> ¡Es quien usa los bloques mágicos en Scratch Jr para crear todo!"
+                             <br>
+                             "👍 <strong>El/La Probador/a de Aventura:</strong> ¡Es el detective del equipo! Revisa que todo funcione bien y da ideas."
+                             <br><br>
+                             "Hoy empezaremos con estos roles, y en las próximas aventuras ¡podrán cambiarlos para probar otros superpoderes! Decidan rápidamente quién será quién en su equipo para hoy."
+                             <br>
+                             <em>(Dar 30 segundos para que decidan roles).</em> "¡Listos!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3: ¡Manos a la Obra! Creando el Mundo -->
+        <div id="activity-3" class="activity">
+             <div class="banner" onclick="toggleContent('activity_3_content')">
+                 🚀 Actividad 3: ¡Manos a la Obra! Creando el Mundo ⏰ Tiempo: 25 minutos
+            </div>
+            <div id="activity_3_content" class="content">
+                <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1: (2 min) Crear Proyecto Nuevo</strong>
+                            <ul>
+                                <li>Proyectar <strong>Diapositiva 4</strong> (Título: ¡A Crear Nuestro Mundo!. Contenido: Captura de pantalla de Scratch Jr. destacando el botón '+ Nuevo Proyecto').</li>
+                                <li>Indicar al rol "Constructor/a Scratch Jr." de cada equipo que abra Scratch Jr. y cree un nuevo proyecto.</li>
+                                <li>Mover la tarjeta "Crear Proyecto" a la columna "Haciendo" en el Kanban.</li>
+                                <li>Asegurarse de que todos los equipos logren crear su proyecto.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            "¡Equipos, es hora de la acción! 🛠️ Constructor/a Scratch Jr. de cada equipo: ¡Es tu momento! Abre Scratch Jr. en tu dispositivo y pulsa el botón '+' para crear un nuevo proyecto vacío. ¡Aquí nacerá su aventura!"
+                            <br><br>
+                            <em>(Mientras lo hacen)</em> "¡Muy bien! Ya estamos 'Haciendo' nuestra primera tarea." <em>(Mover la tarjeta "Crear Proyecto" a "Haciendo" en el Kanban).</em> "¿Todos tienen su hoja en blanco digital?"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2: (18 min) Añadir Personajes y Fondos</strong>
+                            <ul>
+                                <li>Proyectar <strong>Diapositiva 5</strong> (Título: Añadiendo Personajes y Fondos. Contenido: Ejemplos visuales de personajes y fondos en Scratch Jr., quizás señalar el editor de pintura).</li>
+                                <li>Instruir al "Constructor/a" para que, usando los dibujos como guía, cree o elija los personajes (Héroe, Villano/Elemento del Problema) y los fondos (Escena Inicial, Escena Peor, Escena Mejor).</li>
+                                <li>Recordar el rol del "Diseñador/a" (supervisar parecido con dibujos, ayudar con colores/detalles) y del "Probador/a" (observar, dar feedback sobre si se ve bien).</li>
+                                <li>Mover las tarjetas "Añadir Personajes" y "Añadir Fondos" a "Haciendo" en el Kanban.</li>
+                                <li>Circular activamente entre los equipos, ofreciendo ayuda con la interfaz de Scratch Jr. (editor de personajes, selección de fondos), resolviendo dudas y animando la colaboración.</li>
+                                <li>Fomentar que usen el editor de pintura si quieren personalizar, pero también pueden usar los personajes/fondos existentes.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            "¡Genial! Ahora, vamos a poblar nuestro mundo. 🛠️ Constructor/a, mira los dibujos de tu equipo. ¡Es hora de traerlos a la vida! Busca o dibuja a tu Héroe y al Villano o problema. Y no olvides los fondos: necesitamos la Escena donde todo empieza, la Escena donde las cosas van mal (la Peor) y la Escena donde el Héroe triunfa (la Mejor)."
+                            <br><br>
+                            "🎨 Diseñador/a, ¡tu ojo artístico es clave! Ayuda al Constructor/a para que los personajes y fondos se parezcan lo más posible a sus dibujos. ¿Qué colores usamos? ¿Qué detalles son importantes?"
+                            <br><br>
+                            "👍 Probador/a, ¡tú eres nuestros ojos! Observa cómo va quedando todo. ¿Te gusta cómo se ven el Héroe y el Villano? ¿Los fondos transmiten la idea correcta? ¡Dile a tu equipo lo que piensas!"
+                            <br><br>
+                            <em>(Mover las tarjetas "Añadir Personajes" y "Añadir Fondos" a "Haciendo" en el Kanban).</em>
+                            <br><br>
+                            "Recuerden, pueden usar los personajes que ya existen en Scratch Jr. o, si se sienten valientes, ¡usar el pincel mágico para dibujar los suyos! Yo estaré pasando para ayudarles si lo necesitan."
+                            <br>
+                            <em>(Circular y apoyar, preguntar: "¿Cómo va ese Héroe?", "¿Ya tienen la escena inicial?", "¡Qué bien se ve ese Villano!", "¿Necesitan ayuda para cambiar el color?").</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 3: (5 min) Posicionar Personajes Iniciales y Verificar</strong>
+                            <ul>
+                                <li>Asegurarse de que cada equipo tenga al menos el Héroe y Villano/Problema creados y el fondo de la Escena Inicial listo.</li>
+                                <li>Indicar al "Constructor/a" que coloque al Héroe y al Villano/Problema en la Escena Inicial, en sus posiciones de partida según su historia/dibujo.</li>
+                                <li>Pedir al "Probador/a" que verifique: "¿Se ven bien? ¿Están en el lugar correcto para empezar la historia?".</li>
+                                <li>Si los elementos básicos (personajes principales y escena inicial) están listos y posicionados, mover las tarjetas correspondientes a "Listo para Probar" en el Kanban (o incluso a "¡Listo!" si la verificación es satisfactoria para esta etapa inicial).</li>
+                            </ul>
+                        </td>
+                        <td>
+                            "¡Fantástico trabajo, equipos! Ya casi tenemos el escenario listo para la acción."
+                            <br><br>
+                            "🛠️ Constructor/a, ahora ve a la Escena Inicial. Coloca a tu Héroe y a tu Villano (o el problema) justo donde deben empezar según su historia. ¿Dónde se encuentran al principio?"
+                            <br><br>
+                            "👍 Probador/a, ¡última revisión por hoy! ¿Están bien colocados? ¿Se ven listos para empezar? ¡Danos tu visto bueno!"
+                            <br><br>
+                            <em>(Animar a mover las tarjetas en el Kanban a "Listo para Probar" o "¡Listo!" para las tareas completadas).</em> "¡Parece que esos personajes y fondos están listos para la siguiente fase!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 4: Cierre Rápido y Próximos Pasos -->
+        <div id="activity-4" class="activity">
+             <div class="banner" onclick="toggleContent('activity_4_content')">
+                 ✅ Actividad 4: Cierre Rápido y Próximos Pasos ⏰ Tiempo: 5 minutos
+            </div>
+            <div id="activity_4_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1: (3 min) Guardar el Proyecto</strong>
+                            <ul>
+                                <li>Proyectar <strong>Diapositiva 6</strong> (Título: ¡Mundo Creado! Próximos Pasos. Contenido: Icono grande de 'Guardar', campo de nombre de proyecto, icono de 'clic' o interacción).</li>
+                                <li>Felicitar a los equipos por su progreso.</li>
+                                <li>Indicar explícitamente CÓMO guardar el proyecto en Scratch Jr.</li>
+                                <li>Sugerir un formato de nombre claro (Ej: "EquipoRojo_ODS14", "EquipoAzul_Bosque").</li>
+                                <li>Asegurarse de que todos los equipos guarden su trabajo.</li>
+                                <li>Confirmar que las tareas principales están en "¡Listo!" en el Kanban.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            "¡Genial, Equipos de Héroes! ¡Han dado el primer gran paso! Ya tienen su mundo digital con sus personajes y escenas listas para la aventura."
+                            <br><br>
+                            "¡Ahora viene lo MÁS importante! ¡Guardar nuestro trabajo para no perderlo! Busquen el icono para guardar su proyecto." <em>(Señalar en la diapositiva o demostrar brevemente si es necesario).</em>
+                            <br><br>
+                            "Pónganle un nombre fácil de recordar, como el nombre de su equipo y su misión. Por ejemplo: 'EquipoLeones_AguaLimpia' o 'SuperEquipo_SalvaArboles'."
+                            <br><br>
+                            "¡Asegúrense de que esté bien guardado antes de cerrar!"
+                            <br><br>
+                            <em>(Verificar el Kanban)</em> "¡Y miren nuestro Tablero de Misión! ¡Hemos completado nuestras tareas de hoy!" <em>(Asegurarse de que las tarjetas estén en "¡Listo!").</em>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 2: (2 min) Avance de Próxima Sesión</strong>
+                            <ul>
+                                <li>Anticipar brevemente el contenido de la Sesión 2 (programar la interacción de clic).</li>
+                                <li>Generar expectación y motivación.</li>
+                                <li>Despedida.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            "¡Han hecho un trabajo increíble hoy creando las bases de su aventura!"
+                            <br><br>
+                            "¿Saben qué haremos en la próxima sesión? ¡Le daremos el súper poder del 'clic' a nuestros personajes! Haremos que al tocar al Héroe pase algo bueno (¡ir a la Escena Mejor!) y al tocar al Villano... ¡pase algo no tan bueno (ir a la Escena Peor!)! ¡Será la magia de la interacción!"
+                            <br><br>
+                            "¡Prepárense para darle vida a su historia! ¡Nos vemos en la próxima misión, Héroes!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div> <!-- Fin del container -->
+</body>
+</html>
