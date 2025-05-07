@@ -32,7 +32,7 @@
             font-weight: bold;
         }
          ul, ol {
-            margin-top: 0;
+            margin-top: 5px; /* Added some margin */
             margin-bottom: 10px;
             padding-left: 20px;
         }
@@ -44,19 +44,25 @@
             font-style: italic;
             color: #555;
         }
+        /* Ensure list styling within Action column is consistent */
+        .content td ul, .content td ol {
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+         .content td li {
+            margin-bottom: 3px; /* Slightly tighter list spacing */
+        }
     </style>
     <script>
         function toggleContent(id) {
             const content = document.getElementById(id);
             if (content) {
-                // Toggle display
                 content.style.display = content.style.display === "none" ? "block" : "none";
             }
         }
 
         // Initialize content hidden state on load
         window.onload = () => {
-             // Ensure all content starts hidden
             const contents = document.querySelectorAll('.content');
             contents.forEach(content => {
                 content.style.display = 'none';
@@ -76,7 +82,7 @@
              <div class="banner" onclick="toggleContent('activity_0_content')">
                 📝 Resumen de Sesión
             </div>
-            <div id="activity_0_content" class="content"> <!-- Start hidden -->
+            <div id="activity_0_content" class="content">
                 <table>
                     <tr>
                         <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
@@ -134,9 +140,9 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 1: (5 min)</strong>
+                            <strong>Paso 1:</strong>
                             <ul>
-                                <li>Proyectar <strong>Diapositiva 1</strong> (Título: Recordando Nuestra Misión ODS. Contenido: Iconos ODS relevantes, imagen inspiradora de niños ayudando al planeta).</li>
+                                <li>Proyectar <strong>Diapositiva 1</strong>. <em>Título:</em> Recordando Nuestra Misión ODS.</li>
                                 <li>Saludar y dar la bienvenida.</li>
                                 <li>Preguntar a los equipos si recuerdan su misión ODS y los personajes/escenas que dibujaron.</li>
                                 <li>Mostrar brevemente los dibujos/T-Bar de cada equipo como recordatorio visual.</li>
@@ -169,12 +175,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 1: (3 min) Explicar Kanban</strong>
+                            <strong>Paso 1: Explicar Kanban</strong>
                             <ul>
-                                <li>Proyectar <strong>Diapositiva 2</strong> (Título: Nuestro Tablero de Misión - Kanban. Contenido: Imagen simple del tablero Kanban con las 4 columnas: 📝 Por Hacer, ⚙️ Haciendo, ✅ Listo para Probar, 🎉 ¡Listo!).</li>
-                                <li>Presentar el tablero Kanban como una herramienta mágica para organizar el trabajo.</li>
-                                <li>Explicar las columnas de forma muy simple y visual, moviendo una tarjeta de ejemplo ("Crear Proyecto") a través de las fases.</li>
-                                <li>Mostrar las tarjetas iniciales ("Crear Proyecto", "Añadir Personajes", "Añadir Fondos") en la columna "Por Hacer".</li>
+                                <li>Proyectar <strong>Diapositiva 2</strong>. <em>Título:</em> Nuestro Tablero de Misión - Kanban.</li>
+                                <li>Presentar el tablero Kanban.</li>
+                                <li>Explicar las columnas.</li>
+                                <li>Mover una tarjeta de ejemplo.</li>
+                                <li>Mostrar las tarjetas iniciales en "Por Hacer".</li>
                             </ul>
                         </td>
                         <td>
@@ -193,12 +200,12 @@
                     </tr>
                      <tr>
                         <td>
-                            <strong>Paso 2: (2 min) Explicar Roles</strong>
+                            <strong>Paso 2: Explicar Roles</strong>
                             <ul>
-                                <li>Proyectar <strong>Diapositiva 3</strong> (Título: Roles de Héroes. Contenido: Iconos o dibujos simples para cada rol: Diseñador/a 🎨, Constructor/a 🛠️, Probador/a 👍).</li>
-                                <li>Explicar que en cada equipo habrá roles para ayudarse mutuamente.</li>
-                                <li>Describir brevemente qué hace cada rol de forma sencilla.</li>
-                                <li>Mencionar que los roles podrán rotar en futuras sesiones.</li>
+                                <li>Proyectar <strong>Diapositiva 3</strong>. <em>Título:</em> Roles de Héroes.</li>
+                                <li>Explicar que en cada equipo habrá roles.</li>
+                                <li>Describir brevemente qué hace cada rol.</li>
+                                <li>Mencionar que los roles podrán rotar.</li>
                                 <li>Asignar roles iniciales o pedir que los equipos se organicen rápidamente.</li>
                             </ul>
                         </td>
@@ -233,11 +240,11 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 1: (2 min) Crear Proyecto Nuevo</strong>
+                            <strong>Paso 1: Crear Proyecto Nuevo</strong>
                             <ul>
-                                <li>Proyectar <strong>Diapositiva 4</strong> (Título: ¡A Crear Nuestro Mundo!. Contenido: Captura de pantalla de Scratch Jr. destacando el botón '+ Nuevo Proyecto').</li>
-                                <li>Indicar al rol "Constructor/a Scratch Jr." de cada equipo que abra Scratch Jr. y cree un nuevo proyecto.</li>
-                                <li>Mover la tarjeta "Crear Proyecto" a la columna "Haciendo" en el Kanban.</li>
+                                <li>Proyectar <strong>Diapositiva 4</strong>. <em>Título:</em> ¡A Crear Nuestro Mundo!.</li>
+                                <li>Indicar al rol "Constructor/a Scratch Jr." que cree un nuevo proyecto.</li>
+                                <li>Mover la tarjeta "Crear Proyecto" a "Haciendo".</li>
                                 <li>Asegurarse de que todos los equipos logren crear su proyecto.</li>
                             </ul>
                         </td>
@@ -249,14 +256,14 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 2: (18 min) Añadir Personajes y Fondos</strong>
+                            <strong>Paso 2: Añadir Personajes y Fondos</strong>
                             <ul>
-                                <li>Proyectar <strong>Diapositiva 5</strong> (Título: Añadiendo Personajes y Fondos. Contenido: Ejemplos visuales de personajes y fondos en Scratch Jr., quizás señalar el editor de pintura).</li>
-                                <li>Instruir al "Constructor/a" para que, usando los dibujos como guía, cree o elija los personajes (Héroe, Villano/Elemento del Problema) y los fondos (Escena Inicial, Escena Peor, Escena Mejor).</li>
-                                <li>Recordar el rol del "Diseñador/a" (supervisar parecido con dibujos, ayudar con colores/detalles) y del "Probador/a" (observar, dar feedback sobre si se ve bien).</li>
-                                <li>Mover las tarjetas "Añadir Personajes" y "Añadir Fondos" a "Haciendo" en el Kanban.</li>
-                                <li>Circular activamente entre los equipos, ofreciendo ayuda con la interfaz de Scratch Jr. (editor de personajes, selección de fondos), resolviendo dudas y animando la colaboración.</li>
-                                <li>Fomentar que usen el editor de pintura si quieren personalizar, pero también pueden usar los personajes/fondos existentes.</li>
+                                <li>Proyectar <strong>Diapositiva 5</strong>. <em>Título:</em> Añadiendo Personajes y Fondos.</li>
+                                <li>Instruir al "Constructor/a" para crear/elegir personajes (Héroe, Villano/Problema) y fondos (Inicial, Peor, Mejor) según los dibujos.</li>
+                                <li>Recordar roles de "Diseñador/a" y "Probador/a".</li>
+                                <li>Mover tarjetas "Añadir Personajes" y "Añadir Fondos" a "Haciendo".</li>
+                                <li>Circular y ofrecer ayuda.</li>
+                                <li>Fomentar el uso del editor de pintura o personajes existentes.</li>
                             </ul>
                         </td>
                         <td>
@@ -275,12 +282,12 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 3: (5 min) Posicionar Personajes Iniciales y Verificar</strong>
+                            <strong>Paso 3: Posicionar Personajes Iniciales y Verificar</strong>
                             <ul>
-                                <li>Asegurarse de que cada equipo tenga al menos el Héroe y Villano/Problema creados y el fondo de la Escena Inicial listo.</li>
-                                <li>Indicar al "Constructor/a" que coloque al Héroe y al Villano/Problema en la Escena Inicial, en sus posiciones de partida según su historia/dibujo.</li>
-                                <li>Pedir al "Probador/a" que verifique: "¿Se ven bien? ¿Están en el lugar correcto para empezar la historia?".</li>
-                                <li>Si los elementos básicos (personajes principales y escena inicial) están listos y posicionados, mover las tarjetas correspondientes a "Listo para Probar" en el Kanban (o incluso a "¡Listo!" si la verificación es satisfactoria para esta etapa inicial).</li>
+                                <li>Asegurarse de que cada equipo tenga Héroe, Villano/Problema y Escena Inicial.</li>
+                                <li>Indicar al "Constructor/a" que coloque los personajes en la Escena Inicial.</li>
+                                <li>Pedir al "Probador/a" que verifique.</li>
+                                <li>Mover tarjetas correspondientes en Kanban.</li>
                             </ul>
                         </td>
                         <td>
@@ -310,14 +317,14 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 1: (3 min) Guardar el Proyecto</strong>
+                            <strong>Paso 1: Guardar el Proyecto</strong>
                             <ul>
-                                <li>Proyectar <strong>Diapositiva 6</strong> (Título: ¡Mundo Creado! Próximos Pasos. Contenido: Icono grande de 'Guardar', campo de nombre de proyecto, icono de 'clic' o interacción).</li>
-                                <li>Felicitar a los equipos por su progreso.</li>
-                                <li>Indicar explícitamente CÓMO guardar el proyecto en Scratch Jr.</li>
-                                <li>Sugerir un formato de nombre claro (Ej: "EquipoRojo_ODS14", "EquipoAzul_Bosque").</li>
-                                <li>Asegurarse de que todos los equipos guarden su trabajo.</li>
-                                <li>Confirmar que las tareas principales están en "¡Listo!" en el Kanban.</li>
+                                <li>Proyectar <strong>Diapositiva 6</strong>. <em>Título:</em> ¡Mundo Creado! Próximos Pasos.</li>
+                                <li>Felicitar a los equipos.</li>
+                                <li>Indicar CÓMO guardar el proyecto en Scratch Jr.</li>
+                                <li>Sugerir formato de nombre claro.</li>
+                                <li>Asegurarse de que todos guarden.</li>
+                                <li>Confirmar tareas en "¡Listo!" en Kanban.</li>
                             </ul>
                         </td>
                         <td>
@@ -334,9 +341,9 @@
                     </tr>
                      <tr>
                         <td>
-                            <strong>Paso 2: (2 min) Avance de Próxima Sesión</strong>
+                            <strong>Paso 2: Avance de Próxima Sesión</strong>
                             <ul>
-                                <li>Anticipar brevemente el contenido de la Sesión 2 (programar la interacción de clic).</li>
+                                <li>Anticipar brevemente el contenido de la Sesión 2.</li>
                                 <li>Generar expectación y motivación.</li>
                                 <li>Despedida.</li>
                             </ul>
